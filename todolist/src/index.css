@@ -1,0 +1,107 @@
+:root {
+  --lucky-point: #231354;
+  --prelude: #E0D1EE;
+  --white: white;
+  --purple-heart: #764BD2;
+  --dull-lavender: #9D99E5;
+  --darker-lavender: #6e6c9f;
+
+  --font-color: var(--white);
+  --bg-primary-color: var(--lucky-point);
+  --bg-secondary-color: var(--dull-lavender);
+  --border-secondary-color: var(--purple-heart);
+
+  --border-radius: 0.75rem;
+}
+
+body {
+  background-color: var(--bg-primary-color);
+  color: var(--font-color);
+  font-family: "Press Start 2P";
+}
+
+h1 {
+  font-size: clamp(0.0625rem, 0.0625rem + 1.9375vw, 2rem);
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoInput {
+  --border: var(--border-radius);
+  --input-font-size: 1rem;
+  --input-padding: 0.25em 0.5em;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  input {
+    background-color: var(--bg-secondary-color);
+    border-radius: var(--border);
+    border: 0.5em solid var(--border-secondary-color);
+    width: 60%;
+    height: 2.5rem;
+    margin-right: 3%;
+    font-size: var(--input-font-size);
+    color: var(--font-color);
+    padding: var(--input-padding);
+  }
+
+  input::placeholder {
+    color: var(--font-color);
+    font-size: var(--input-font-size);
+    padding: var(--input-padding);
+  }
+
+  button {
+    min-width: 4.5rem;
+    text-align: center;
+    background-color: var(--bg-secondary-color);
+    border-radius: var(--border);
+    border: 0.5em solid var(--border-secondary-color);
+  }
+
+  button:active {
+    opacity: 0.85;
+    /* background-color: var(--darker-lavender);#9D99E5; */
+  }
+}
+
+.container {
+  --border: var(--border-radius);
+  background-color: var(--bg-secondary-color);
+  border-radius: var(--border);
+  border: 0.5em solid var(--border-secondary-color);
+  width: 85%;
+  height: 60vh;
+  inset: 0;
+  margin: auto;
+  margin-top: 2%;
+  padding: 1.5%;
+  columns: 300px;
+  overflow-x: scroll;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  li {
+    --border: var(--border-radius);
+    background-color: var(--bg-secondary-color);
+    border-radius: var(--border);
+    border: calc(0.5em/1.25) solid var(--border-secondary-color);
+    display: block;
+    background-color: var(--bg-primary-color);
+    text-align: center;
+    margin-bottom: 5%;
+    break-inside: avoid;
+  }
+}
