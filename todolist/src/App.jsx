@@ -51,8 +51,10 @@ function App() {
         <main>
             <section>
                 <TodoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos}/>
-                <div className="container">
-                    <TodoList handleDeleteTodo={handleDeleteTodo} todos={todos} handleEditTodo={handleEditTodo}/>
+                <div className="container scrollbar">
+                    <div className='wrapper'>
+                        <TodoList handleDeleteTodo={handleDeleteTodo} todos={todos} handleEditTodo={handleEditTodo}/>
+                    </div>
                 </div>
             </section>
         </main>

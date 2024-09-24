@@ -85,8 +85,13 @@ button:active {
   margin: auto;
   margin-top: 2%;
   padding: 1.5%;
-  columns: 300px;
-  overflow-x: scroll;
+  overflow-y: scroll;
+
+  .wrapper {
+    width: 100%;
+    height: auto;
+    columns: 300px;
+  }
 
   img {
     width: 100%;
@@ -123,4 +128,18 @@ button:active {
       width: 100%;
     }
   }
+}
+
+@supports (scrollbar-width: auto) {
+  .scrollbar {
+    scrollbar-color: var(--bg-primary-color) var(--bg-secondary-color);
+  }
+}
+
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
 }

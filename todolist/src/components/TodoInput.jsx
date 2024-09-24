@@ -9,7 +9,13 @@ export default function TodoInput(props) {
             <h1>To do List</h1>
             <div className="todoInput"><input value={todoValue} onChange={(e) => {
                 setTodoValue(e.target.value)
-            }} placeholder="Enter todo... " type="text" name="" id="" />
+            }} placeholder="Enter todo... " type="text" name="" id="" 
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' && e.target.value !== '') {
+                    handleAddTodos(todoValue)
+                    setTodoValue('')
+                }
+            }}/>
             <button onClick={() => {
                 handleAddTodos(todoValue)
                 setTodoValue('')
