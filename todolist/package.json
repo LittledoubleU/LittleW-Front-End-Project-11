@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://littledoubleu.github.io/LittleW-Front-End-Project-11/todolist/index",
+  "homepage": "https://littledoubleu.github.io/LittleW-Front-End-Project-11",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
