@@ -10,12 +10,12 @@ export default function TodoCard(props) {
                     <button onClick={() => {
                         handleEditTodo(index)
                     }}>
-                    <img src="../public/pencil.svg" alt="pencil icon" />
+                    <img src="/pencil.svg" alt="pencil icon" />
                     </button>
                     <button onClick={() => {
                         handleDeleteTodo(index)
                     }}>
-                    <img src="../public/trash.svg" alt="pencil icon" />
+                    <img src="/trash.svg" alt="pencil icon" />
                     </button>
                 </div>
             </div>
